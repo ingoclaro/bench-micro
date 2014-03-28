@@ -1,4 +1,3 @@
-#!/usr/bin/env ruby
 require 'bundler'
 Bundler.setup
 # dummy run method
