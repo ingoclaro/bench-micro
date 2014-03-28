@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
-class SummaryTable
-  def generate
-    lines = File.read('summary.txt').split("\n")
+class SpeedSummaryTable
+  def generate(content)
+    lines = content.split("\n")
     results = lines.each_slice(2).map do |pair|
       name   = pair[0].gsub("*", '').strip.downcase
       number = pair[1].match(/(\d|\.)+/)[0]
@@ -17,5 +17,3 @@ class SummaryTable
     table
   end
 end
-
-puts SummaryTable.new.generate

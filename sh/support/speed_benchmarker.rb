@@ -84,7 +84,3 @@ class Benchmarker
     stream.reopen(old_stream)
   end
 end
-
-Dir["apps/*.ru"].each do |config_file|
-  Benchmarker.new(config_file).run
-end

@@ -1,0 +1,27 @@
+#!/usr/bin/env ruby
+require './sh/support/speed_benchmarker'
+require './sh/support/speed_summary_table'
+
+def redirect_stream(stream, path)
+  old_stream = stream.dup
+  stream.reopen(path)
+  stream.sync = true
+  yield
+ensure
+  stream.reopen(old_stream)
+end
+
+puts "please wait... the output will come, when finished"
+redirect_stream(STDOUT, 'test.log') do
+  Dir["apps/*.ru"].each do |config_file|
+    Benchmarker.new(config_file).run
+  end
+end
+
+content = %x(egrep '\\*|Request' test.log)
+
+File.open('results/speed.txt', 'w') do |f|
+  f.puts SpeedSummaryTable.new.generate(content)
+end
+puts SpeedSummaryTable.new.generate(content)
+
