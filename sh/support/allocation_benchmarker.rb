@@ -7,7 +7,7 @@ def run(*args); ; end
 require 'rack/mock'
 require 'allocation_stats'
 
-class AllocationsTracker
+class AllocationsBenchmarker
   attr_accessor :config
   def initialize(config)
     @config = config

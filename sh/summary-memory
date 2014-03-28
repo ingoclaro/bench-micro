@@ -1,9 +1,9 @@
 #!/usr/bin/env ruby
 
-require './sh/support/allocation_tracker'
+require './sh/support/allocation_benchmarker'
 
 results = Dir['apps/*.ru'].map do |file|
-  tracker = AllocationsTracker.new(file)
+  tracker = AllocationsBenchmarker.new(file)
   tracker.human_output
   Object.send(:remove_const, :APP)
   Object.send(:remove_const, :HelloWorld) if Object.constants.include?(:HelloWorld)
