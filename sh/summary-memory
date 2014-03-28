@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
-
 require './sh/support/allocation_benchmarker'
+require './sh/support/allocation_summary_table'
 
 results = Dir['apps/*.ru'].map do |file|
   tracker = AllocationsBenchmarker.new(file)
@@ -11,30 +11,9 @@ results = Dir['apps/*.ru'].map do |file|
   tracker.machine_result
 end
 
-def table_header(a,b,c)
-  "| #{a.ljust(20)} | #{b.to_s.ljust(12)} | #{c.to_s.ljust(12)} |"
-end
+summary_table = AllocationSummaryTable.new(results)
+puts summary_table.render
 
-def table_row(a,b,c)
-  "| #{a.ljust(20)} | #{b.to_s.rjust(12)} | #{c.to_s.rjust(12)} |"
-end
-
-sorted = results.sort_by{|x| x[:total_allocations]}
-table = sorted.map do |res|
-  name        = res[:frameworkname].downcase
-  allocations = res[:total_allocations]
-  memory      = res[:total_memsize]
-  table_row(name, allocations, memory)
-end.join("\n")
-
-puts "*"*80
-puts "SUMMARY:"
-
-summary = []
-summary << table_header("Framework", "Tot. alloc.", 'Tot. mem.')
-summary << table_header(":------------", "-----:", '-----:')
-summary << table
 File.open('results/memory.txt', 'w') do |f|
-  f.puts summary.join("\n")
+  f.puts summary_table.render
 end
-puts summary
