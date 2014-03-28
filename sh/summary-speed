@@ -20,8 +20,9 @@ end
 
 content = %x(egrep '\\*|Request' test.log)
 
+summary_table = SpeedSummaryTable.new(content)
 File.open('results/speed.txt', 'w') do |f|
-  f.puts SpeedSummaryTable.new.generate(content)
+  f.puts summary_table.generate
 end
-puts SpeedSummaryTable.new.generate(content)
+puts summary_table.generate
 
