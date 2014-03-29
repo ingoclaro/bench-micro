@@ -40,8 +40,8 @@ class SpeedSummaryTable
 
   def table
     sorted_results.map do |pair|
-      name = pair[0]
-      rps  = pair[1]
+      name  = pair[0]
+      rps   = pair[1]
       num   = (pair[1].to_f/max_rps)
       round = ((num * 10000).round*1.0 ) / 100
       table_row(name, rps, round.to_s + "%")
