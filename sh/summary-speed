@@ -25,4 +25,4 @@ File.open('results/speed.md', 'w') do |f|
   f.puts summary_table.render_markdown
 end
 puts summary_table.render
-
+summary_table.replace_readme('speed_table')

@@ -17,3 +17,4 @@ puts summary_table.render
 File.open('results/memory.md', 'w') do |f|
   f.puts summary_table.render_markdown
 end
+summary_table.replace_readme('mem_table')
