@@ -17,6 +17,7 @@ class AllocationsBenchmarker
     puts frameworkname
     puts "total allocations: #{total_allocations}"
     puts "total memsize: #{total_memsize}"
+    detailed_allocations
     puts
   end
 
