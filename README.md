@@ -18,19 +18,19 @@ nor to do a silly *fibonacci-as-a-service*, ok?
 
 The following microframeworks were considered when doing this research:
 
-- [Brooklyn](https://github.com/luislavena/brooklyn) - [brooklyn.ru](brooklyn.ru)
-- [Cuba](https://github.com/soveran/cuba) - [cuba.ru](cuba.ru)
-- [Hobbit](https://github.com/patriciomacadden/hobbit) - [hobbit.ru](hobbit.ru)
-- [Lotus (Router)](https://github.com/lotus/router) - [lotus-router.ru](lotus-router.ru)
-- [Nancy](https://github.com/heapsource/nancy) - [nancy.ru](nancy.ru)
-- [NYNY](https://github.com/alisnic/nyny) - [nyny.ru](nyny.ru)
-- [Mustermann](https://github.com/rkh/mustermann) - [mustermann.ru](mustermann.ru)
-- [Rack](https://github.com/rack/rack) - [rack.ru](rack.ru)
-- [Rails](https://github.com/rails/rails) - [rails.ru](rails.ru)
-- [Ramaze](https://github.com/Ramaze/ramaze) - [ramaze.ru](ramaze.ru)
-- [Rambutan](https://github.com/NewRosies/rambutan) - [rambutan.ru](rambutan.ru)
-- [Scorched](https://github.com/Wardrop/Scorched) - [scorched.ru](scorched.ru)
-- [Sinatra](https://github.com/sinatra/sinatra) - [sinatra.ru](sinatra.ru)
+- [Brooklyn](https://github.com/luislavena/brooklyn) - [brooklyn.ru](apps/brooklyn.ru)
+- [Cuba](https://github.com/soveran/cuba) - [cuba.ru](apps/cuba.ru)
+- [Hobbit](https://github.com/patriciomacadden/hobbit) - [hobbit.ru](apps/hobbit.ru)
+- [Lotus (Router)](https://github.com/lotus/router) - [lotus-router.ru](apps/lotus-router.ru)
+- [Nancy](https://github.com/heapsource/nancy) - [nancy.ru](apps/nancy.ru)
+- [NYNY](https://github.com/alisnic/nyny) - [nyny.ru](apps/nyny.ru)
+- [Mustermann](https://github.com/rkh/mustermann) - [mustermann.ru](apps/mustermann.ru)
+- [Rack](https://github.com/rack/rack) - [rack.ru](apps/rack.ru) + [rack-response.ru](apps/rack-response.ru)
+- [Rails](https://github.com/rails/rails) - [rails.ru](apps/rails.ru)
+- [Ramaze](https://github.com/Ramaze/ramaze) - [ramaze.ru](apps/ramaze.ru)
+- [Rambutan](https://github.com/NewRosies/rambutan) - [rambutan.ru](apps/rambutan.ru)
+- [Scorched](https://github.com/Wardrop/Scorched) - [scorched.ru](apps/scorched.ru)
+- [Sinatra](https://github.com/sinatra/sinatra) - [sinatra.ru](apps/sinatra.ru)
 
 Please note that while Rails has been added to the list, it is just a
 minimalistic representation (using Metal, no full middleware stack, etc). You
@@ -54,7 +54,8 @@ $ puma -e production -t 16:16 <framework.ru>
 ```
 
 ## Run benchmark for all frameworks
-    $ sh/summary
+    $ sh/summary-memory
+    $ sh/summary-speed
 
 
 ### Have some numbers around?
