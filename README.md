@@ -64,41 +64,46 @@ Yup, I do:
 
 #### Request/sec
 
-| Framework            | Req/sec      | % from best  |
-| :------------        | -----:       | -----:       |
-| rack                 |      9030.25 |       100.0% |
-| mustermann           |      7872.85 |       87.18% |
-| hobbit               |      7492.76 |       82.97% |
-| cuba                 |      7477.54 |       82.81% |
-| lotus-router         |      7396.39 |       81.91% |
-| rack-response        |      6990.69 |       77.41% |
-| brooklyn             |      6491.90 |       71.89% |
-| rambutan             |      6143.28 |       68.03% |
-| nancy                |      5915.84 |       65.51% |
-| nyny                 |      4495.02 |       49.78% |
-| sinatra              |      2972.37 |       32.92% |
-| rails                |      1784.49 |       19.76% |
-| scorched             |      1727.95 |       19.14% |
-| ramaze               |      1463.66 |       16.21% |
+```
+Framework            Requests/sec  % from best
+----------------------------------------------
+rack                      9030.25       100.0%
+mustermann                7872.85       87.18%
+hobbit                    7492.76       82.97%
+cuba                      7477.54       82.81%
+lotus-router              7396.39       81.91%
+rack-response             6990.69       77.41%
+brooklyn                  6491.90       71.89%
+rambutan                  6143.28       68.03%
+nancy                     5915.84       65.51%
+nyny                      4495.02       49.78%
+sinatra                   2972.37       32.92%
+rails                     1784.49       19.76%
+scorched                  1727.95       19.14%
+ramaze                    1463.66       16.21%
+```
 
 #### Memory Allocation/Request
 
-| Framework            | Tot. alloc.  | Tot. mem.    |
-| :------------        | -----:       | -----:       |
-| rack                 |           56 |         1704 |
-| hobbit               |           70 |         1976 |
-| mustermann           |           71 |         2040 |
-| cuba                 |           72 |         1936 |
-| rack-response        |           79 |         3072 |
-| lotus-router         |           91 |         2080 |
-| brooklyn             |           98 |         2432 |
-| nancy                |          108 |         3408 |
-| rambutan             |          116 |         3448 |
-| nyny                 |          166 |         4776 |
-| sinatra              |          255 |        10031 |
-| rails                |          388 |        15335 |
-| ramaze               |          579 |        23837 |
-| scorched             |         1711 |       115524 |
+```
+Framework       Allocs/Req Memsize/Req
+--------------------------------------
+rack                    56        1704
+hobbit                  70        1976
+mustermann              71        2040
+cuba                    72        1936
+rack-response           79        3072
+lotus-router            91        2080
+brooklyn                98        2432
+nancy                  108        3408
+rambutan               116        3448
+nyny                   166        4776
+sinatra                255       10031
+rails                  388       15335
+ramaze                 579       23837
+scorched              1711      115524
+```
+
 
 
 These numbers were collected on:
