@@ -62,7 +62,8 @@ $ puma -e production -t 16:16 <framework.ru>
 
 Yup, I do:
 
-#### Request/sec
+#### Requests/sec
+<!-- speed_table -->
 
 ```
 Framework            Requests/sec  % from best
@@ -82,9 +83,9 @@ rails                     1784.49       19.76%
 scorched                  1727.95       19.14%
 ramaze                    1463.66       16.21%
 ```
-
+<!-- speed_table_end -->
 #### Memory Allocation/Request
-
+<!-- mem_table -->
 ```
 Framework       Allocs/Req Memsize/Req
 --------------------------------------
@@ -103,7 +104,7 @@ rails                  388       15335
 ramaze                 579       23837
 scorched              1711      115524
 ```
-
+<!-- mem_table_end -->
 
 
 These numbers were collected on:
