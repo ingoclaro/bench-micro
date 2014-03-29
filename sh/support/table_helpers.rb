@@ -15,16 +15,16 @@ module TableHelpers
     [%Q(```), render, %Q(```)].join("\n")
   end
 
-  # speed_table
   def replace_readme(comment_signature)
     regex_start  = %Q(<!-- #{comment_signature} -->)
     regex_end    = %Q(<!-- #{comment_signature}_end -->)
     regex_string = %Q(\<\!-- #{comment_signature} --\>(.*)\<\!-- #{comment_signature}_end --\>)
     regex        = Regexp::new(regex_string, Regexp::MULTILINE)
-    content      = File.read('README.md')
-    new_content  = content.gsub(regex, render_markdown)
+    readme       = File.read('README.md')
+    readme_table = [regex_start, render_markdown, regex_end].join("\n")
+    new_readme   = readme.gsub(regex, readme_table)
     File.open('README.md', 'w') do |f|
-      f.puts new_content
+      f.puts new_readme
     end
   end
 end
