@@ -64,7 +64,6 @@ Yup, I do:
 
 #### Requests/sec
 <!-- speed_table -->
-
 ```
 Framework            Requests/sec  % from best
 ----------------------------------------------
@@ -84,6 +83,7 @@ scorched                  1727.95       19.14%
 ramaze                    1463.66       16.21%
 ```
 <!-- speed_table_end -->
+
 #### Memory Allocation/Request
 <!-- mem_table -->
 ```
