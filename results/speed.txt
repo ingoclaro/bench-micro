@@ -1,14 +1,16 @@
-rack:             8945.79 req/sec (1.00x)
-mustermann:       7893.18 req/sec (0.88x)
-cuba:             7558.71 req/sec (0.84x)
-hobbit:           7487.95 req/sec (0.84x)
-lotus-router:     7368.80 req/sec (0.82x)
-rack-response:    6910.03 req/sec (0.77x)
-brooklyn:         6446.25 req/sec (0.72x)
-rambutan:         6169.01 req/sec (0.69x)
-nancy:            5951.31 req/sec (0.67x)
-nyny:             4487.18 req/sec (0.50x)
-sinatra:          2955.96 req/sec (0.33x)
-rails:            1801.61 req/sec (0.20x)
-scorched:         1766.20 req/sec (0.20x)
-ramaze:           1453.57 req/sec (0.16x)
+| Framework            | Req/sec      | % from best  |
+| :------------        | -----:       | -----:       |
+| rack                 |      9030.25 |       100.0% |
+| mustermann           |      7872.85 |       87.18% |
+| hobbit               |      7492.76 |       82.97% |
+| cuba                 |      7477.54 |       82.81% |
+| lotus-router         |      7396.39 |       81.91% |
+| rack-response        |      6990.69 |       77.41% |
+| brooklyn             |      6491.90 |       71.89% |
+| rambutan             |      6143.28 |       68.03% |
+| nancy                |      5915.84 |       65.51% |
+| nyny                 |      4495.02 |       49.78% |
+| sinatra              |      2972.37 |       32.92% |
+| rails                |      1784.49 |       19.76% |
+| scorched             |      1727.95 |       19.14% |
+| ramaze               |      1463.66 |       16.21% |
