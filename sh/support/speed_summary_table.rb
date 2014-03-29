@@ -1,28 +1,21 @@
+require_relative 'table_helpers'
 class SpeedSummaryTable
-  # content: output from wrk, stripped a bit
-  attr_accessor :content
+  include TableHelpers
+  attr_accessor :content # content: output from wrk, stripped a bit
 
   def initialize(content)
     @content = content
   end
 
-  def table_header(a,b,c)
-    "| #{a.ljust(20)} | #{b.to_s.ljust(12)} | #{c.to_s.ljust(12)} |"
-  end
-
-  def table_row(a,b,c)
-    "| #{a.ljust(20)} | #{b.to_s.rjust(12)} | #{c.to_s.rjust(12)} |"
-  end
-
   def summary_table
     summary = []
-    summary << table_header("Framework", "Req/sec", '% from best')
-    summary << table_header(":------------", "-----:", '-----:')
+    summary << table_row("Framework", "Requests/sec", '% from best')
+    summary << table_separator
     summary << table
   end
 
-  def generate
-    summary_table
+  def render
+    summary_table.join("\n")
   end
 
   def lines

@@ -1,7 +1,21 @@
+require_relative 'table_helpers'
 class AllocationSummaryTable
+  include TableHelpers
   attr_accessor :results
+
   def initialize(results)
     @results = results
+  end
+
+  def tab_props
+    [15,10,11]
+  end
+
+  def summary_table
+    summary = []
+    summary << table_row("Framework", "Allocs/Req", 'Memsize/Req')
+    summary << table_separator
+    summary << table
   end
 
   def render
@@ -19,20 +33,5 @@ class AllocationSummaryTable
       memory      = res[:total_memsize]
       table_row(name, allocations, memory)
     end.join("\n")
-  end
-
-  def summary_table
-    summary = []
-    summary << table_header("Framework", "Tot. alloc.", 'Tot. mem.')
-    summary << table_header(":------------", "-----:", '-----:')
-    summary << table
-  end
-
-  def table_header(a,b,c)
-    "| #{a.ljust(20)} | #{b.to_s.ljust(12)} | #{c.to_s.ljust(12)} |"
-  end
-
-  def table_row(a,b,c)
-    "| #{a.ljust(20)} | #{b.to_s.rjust(12)} | #{c.to_s.rjust(12)} |"
   end
 end
