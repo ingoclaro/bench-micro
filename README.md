@@ -62,23 +62,46 @@ $ puma -e production -t 16:16 <framework.ru>
 
 Yup, I do:
 
-```
-Rack:          8777 req/sec (1.0x)
-Cuba:          7559 req/sec (0.86x)
-Lotus(Router): 7449 req/sec (0.85x)
-Hobbit:        7318 req/sec (0.83x)
-Rack:          6783 req/sec (0.77x) (using Rack::Response)
-Brooklyn:      6477 req/sec (0.74x)
-Rambutan:      6025 req/sec (0.67x)
-Nancy:         5775 req/sec (0.66x)
-NYNY:          5206 req/sec (0.59x)
-Sinatra:       2900 req/sec (0.33x)
-Rails:         1619 req/sec (0.18x)
-Scorched:      1581 req/sec (0.18x)
-Ramaze:        1319 req/sec (0.15x)
-```
+#### Request/sec
+
+| Framework            | Req/sec      | % from best  |
+| :------------        | -----:       | -----:       |
+| rack                 |      9030.25 |       100.0% |
+| mustermann           |      7872.85 |       87.18% |
+| hobbit               |      7492.76 |       82.97% |
+| cuba                 |      7477.54 |       82.81% |
+| lotus-router         |      7396.39 |       81.91% |
+| rack-response        |      6990.69 |       77.41% |
+| brooklyn             |      6491.90 |       71.89% |
+| rambutan             |      6143.28 |       68.03% |
+| nancy                |      5915.84 |       65.51% |
+| nyny                 |      4495.02 |       49.78% |
+| sinatra              |      2972.37 |       32.92% |
+| rails                |      1784.49 |       19.76% |
+| scorched             |      1727.95 |       19.14% |
+| ramaze               |      1463.66 |       16.21% |
+
+#### Memory Allocation/Request
+
+| Framework            | Tot. alloc.  | Tot. mem.    |
+| :------------        | -----:       | -----:       |
+| rack                 |           56 |         1704 |
+| hobbit               |           70 |         1976 |
+| mustermann           |           71 |         2040 |
+| cuba                 |           72 |         1936 |
+| rack-response        |           79 |         3072 |
+| lotus-router         |           91 |         2080 |
+| brooklyn             |           98 |         2432 |
+| nancy                |          108 |         3408 |
+| rambutan             |          116 |         3448 |
+| nyny                 |          166 |         4776 |
+| sinatra              |          255 |        10031 |
+| rails                |          388 |        15335 |
+| ramaze               |          579 |        23837 |
+| scorched             |         1711 |       115524 |
+
 
 These numbers were collected on:
 
-- OSX, 10.8.5, MacBook Pro i5 (2.5GHz), 8GB 1600 MHz DDR3.
+- OSX, 10.9.1, MacBook Pro i7 (2.7GHz), 16GB 1333 MHz DDR3.
 - Ruby 2.1.0p0 (GCC 4.7.3)
