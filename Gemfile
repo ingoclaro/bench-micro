@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-ruby "2.1.0"
+ruby "2.1.1"
 
 # webservers
 gem "puma", "~> 2.7.1"
@@ -17,6 +17,7 @@ gem "rambutan"
 gem "scorched", git: "https://github.com/Wardrop/Scorched",        branch: "master"
 gem "sinatra"
 gem "mustermann", github: "rkh/mustermann", branch: "master"
+gem "crepe", github: "crepe/crepe", branch: "master"
 
 # rails
 gem "actionpack", "4.0.1"

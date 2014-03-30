@@ -25,6 +25,7 @@ class Benchmarker
   end
 
   def start_puma
+    puts "running: #{start_command}"
     p1 = fork {
       silence_stream(STDOUT) do
         execute start_command

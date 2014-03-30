@@ -1,4 +1,14 @@
 GIT
+  remote: git://github.com/crepe/crepe.git
+  revision: ce38920ef627d8e8bae5af175bf23e394bb847bb
+  branch: master
+  specs:
+    crepe (0.0.1.pre)
+      activesupport (>= 4.0.0)
+      rack (~> 1.5.x)
+      rack-mount (~> 0.8.x)
+
+GIT
   remote: git://github.com/rkh/mustermann.git
   revision: b184b1f86a0085b0ef106a03aa852e91c47c5a5e
   branch: master
@@ -105,6 +115,8 @@ GEM
       rack (>= 0.4)
     rack-contrib (1.1.0)
       rack (>= 0.9.1)
+    rack-mount (0.8.3)
+      rack (>= 1.0.0)
     rack-protection (1.5.2)
       rack
     rack-test (0.6.2)
@@ -140,6 +152,7 @@ DEPENDENCIES
   actionpack (= 4.0.1)
   allocation_stats
   brooklyn!
+  crepe!
   cuba
   debugger
   hobbit!
