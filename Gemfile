@@ -18,6 +18,7 @@ gem "scorched", git: "https://github.com/Wardrop/Scorched",        branch: "mast
 gem "sinatra"
 gem "mustermann", github: "rkh/mustermann", branch: "master"
 gem "crepe", github: "crepe/crepe", branch: "master"
+gem "grape", github: "intridea/grape", branch: "master"
 
 # rails
 gem "actionpack", "4.0.1"

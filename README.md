@@ -21,6 +21,7 @@ The following microframeworks were considered when doing this research:
 - [Brooklyn](https://github.com/luislavena/brooklyn) - [brooklyn.ru](apps/brooklyn.ru)
 - [Cuba](https://github.com/soveran/cuba) - [cuba.ru](apps/cuba.ru)
 - [Crepe](https://github.com/crepe/crepe) - [crepe.ru](apps/crepe.ru)
+- [Grape](https://github.com/intridea/grape) - [grape.ru](apps/grape.ru)
 - [Hobbit](https://github.com/patriciomacadden/hobbit) - [hobbit.ru](apps/hobbit.ru)
 - [Lotus (Router)](https://github.com/lotus/router) - [lotus-router.ru](apps/lotus-router.ru)
 - [Nancy](https://github.com/heapsource/nancy) - [nancy.ru](apps/nancy.ru)
