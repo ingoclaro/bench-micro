@@ -1,9 +1,7 @@
 source "https://rubygems.org"
 
-ruby "2.1.1"
-
 # webservers
-gem "puma", "~> 2.7.1"
+gem "puma"
 
 # frameworks
 gem "brooklyn", git: "https://github.com/luislavena/brooklyn",     branch: "master"
@@ -11,7 +9,7 @@ gem "cuba"
 gem "hobbit",   git: "https://github.com/patriciomacadden/hobbit", branch: "master"
 gem "lotus-router", git: "https://github.com/lotus/router.git",    branch: "master"
 gem "nancy"
-gem "nyny",     git: "https://github.com/alisnic/nyny",            ref: "release-3.2.1"
+gem "nyny"
 gem "ramaze"
 gem "rambutan"
 gem "scorched", git: "https://github.com/Wardrop/Scorched",        branch: "master"
@@ -27,5 +25,5 @@ gem "railties",   "4.0.1"
 gem "tzinfo"
 
 # debugging
-gem 'debugger'
-gem 'allocation_stats'
+# gem 'debugger'
+# gem 'allocation_stats'

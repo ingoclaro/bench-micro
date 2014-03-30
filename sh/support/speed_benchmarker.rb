@@ -54,7 +54,7 @@ class Benchmarker
   end
 
   def wrk_command
-    "wrk -t 2  -d 2 http://localhost:9292/"
+    "wrk -t 10 -d 20 http://localhost:9292/"
   end
 
 
