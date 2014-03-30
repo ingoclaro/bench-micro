@@ -27,6 +27,7 @@ The following microframeworks were considered when doing this research:
 - [Nancy](https://github.com/heapsource/nancy) - [nancy.ru](apps/nancy.ru)
 - [NYNY](https://github.com/alisnic/nyny) - [nyny.ru](apps/nyny.ru)
 - [Mustermann](https://github.com/rkh/mustermann) - [mustermann.ru](apps/mustermann.ru)
+- [Kenji](https://github.com/kballenegger/kenji) - [kenji.ru](apps/keni.ru)
 - [Rack](https://github.com/rack/rack) - [rack.ru](apps/rack.ru) + [rack-response.ru](apps/rack-response.ru)
 - [Rails](https://github.com/rails/rails) - [rails.ru](apps/rails.ru)
 - [Ramaze](https://github.com/Ramaze/ramaze) - [ramaze.ru](apps/ramaze.ru)

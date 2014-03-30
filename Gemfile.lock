@@ -129,6 +129,10 @@ GEM
     innate (2013.02.21)
       rack (~> 1.5.2)
     journey (1.0.4)
+    json (1.8.1)
+    kenji (1.1.1)
+      json
+      rack (~> 1.5.2)
     lotus-utils (0.1.0)
     minitest (4.7.5)
     multi_json (1.9.2)
@@ -190,6 +194,7 @@ DEPENDENCIES
   debugger
   grape!
   hobbit!
+  kenji
   lotus-router!
   mustermann!
   nancy
